@@ -50,6 +50,17 @@ public class User {
         );
     }
 
+    public static User reconstruct(Long id,
+                                   Email email,
+                                   String passwordHash,
+                                   Role role,
+                                   PlanType plan,
+                                   boolean enabled,
+                                   Instant createdAt,
+                                   Instant updatedAt) {
+        return new User(id, email, passwordHash, role, plan, enabled, createdAt, updatedAt);
+    }
+
     public Long getId() {
         return id;
     }
