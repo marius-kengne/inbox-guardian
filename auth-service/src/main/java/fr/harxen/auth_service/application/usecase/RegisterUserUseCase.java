@@ -7,8 +7,10 @@ import fr.harxen.auth_service.domain.model.User;
 import fr.harxen.auth_service.domain.model.valueobject.Email;
 import fr.harxen.auth_service.domain.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class RegisterUserUseCase {
 
     private final UserRepository userRepository;
